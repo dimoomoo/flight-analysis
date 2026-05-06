@@ -1,12 +1,12 @@
 from langgraph.graph import StateGraph, END
 from typing import TypedDict
 
-# ── State ──────────────────────────────────────────────
+# State 
 class FlightState(TypedDict):
     task: str
     result: str
 
-# ── Agent Nodes ────────────────────────────────────────
+# Agent Nodes 
 def delay_analysis_agent(state: FlightState) -> FlightState:
     result = """
     DELAY ANALYSIS FINDINGS:
@@ -49,7 +49,7 @@ def router(state: FlightState) -> str:
     else:
         return "delay_analysis"
 
-# ── Build the Graph ────────────────────────────────────
+# Build the Graph 
 def build_graph():
     graph = StateGraph(FlightState)
 
@@ -69,7 +69,7 @@ def build_graph():
 
     return graph.compile()
 
-# ── Run ────────────────────────────────────────────────
+# Run
 if __name__ == "__main__":
     app = build_graph()
 
