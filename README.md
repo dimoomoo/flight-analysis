@@ -4,6 +4,8 @@ An agentic AI system built with **LangGraph** that analyses US domestic flight d
 
 ## How It Works
 
+![LangGraph Workflow](langgraph_flow.png)
+
 A central **router** receives a question and intelligently directs it to the correct specialist agent:
 
 Agent Tasks:
